@@ -65,8 +65,10 @@ public class ComputadoresUnique {
     @Column(name = "nome_last_user")
     private String nomeLastUser;
 
-    public ComputadoresUnique(@Valid ComputadoresDTO computadoresDTO) {
+    @Column(name = "status")
+    private String status;
 
+    public ComputadoresUnique(@Valid ComputadoresDTO computadoresDTO) {
         this.nomeUsuario = computadoresDTO.nomeUsuario();
         this.nomeComputador = computadoresDTO.nomeComputador();
         this.localizacao = computadoresDTO.localizacao();
