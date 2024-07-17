@@ -46,7 +46,7 @@ public class ComputadoresUniqueServiceImpl implements ComputadoresUniqueService 
             ComputadoresUnique newComputadoresUnique = new ComputadoresUnique(computadoresDTO);
             String mensagem = "Computador " + computadoresDTO.nomeComputador() + " cadastrado pela primeira vez ";
             String tipo = "primeirocadastro";
-            newComputadoresUnique.setStatus("Alerta");
+            newComputadoresUnique.setStatus("ALERTA");
             logComputadoresService.createLogAutomaticoComputadores(mensagem, computadoresDTO.enderecoMac(), computadoresDTO.nomeComputador(), tipo);
             computadoresUniqueRepository.save(newComputadoresUnique);
         }
